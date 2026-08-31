@@ -3,13 +3,20 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+    "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit",
     "test:decomposer": "tsx src/test-decomposer.ts",
     "test:search": "tsx src/test-search.ts",
     "test:source": "tsx src/test-source-reader.ts",
-    "test:evidence": "tsx src/test-evidence.ts"
+    "test:evidence": "tsx src/test-evidence.ts",
+    "test:planner": "tsx src/test-research-planner.ts",
+    "test:research-claim": "tsx src/test-research-claim.ts",
+    "test:judge": "tsx src/test-evidence-judge.ts",
+    "test:thesis-judge": "tsx src/test-thesis-judge.ts",
+    "test:analyzer": "tsx src/test-analyzer.ts"
   },
   "dependencies": {
     "@thesis/domain": "file:../domain",

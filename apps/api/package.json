@@ -3,12 +3,14 @@
   "private": true,
   "version": "0.1.0",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
+    "dev": "tsx src/bootstrap.ts",
     "build": "tsc",
     "typecheck": "tsc --noEmit",
     "lint": "eslint ."
   },
   "dependencies": {
+    "@fastify/cors": "^11.3.0",
+    "@thesis/agents": "workspace:*",
     "@thesis/domain": "file:../../packages/domain",
     "fastify": "^5.0.0",
     "openai": "^7.8.0"

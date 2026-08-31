@@ -5,12 +5,14 @@ import type {
 } from "./types.js";
 
 const client = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 export async function searchWeb(
     query: ResearchQuery,
 ): Promise<ResearchResult[]> {
+     console.log("ENTERED searchWeb:", query.query);
+     console.log("CALLING OPENAI...");
     const response = await client.responses.create({
         model: "gpt-5.6-luna",
         tools: [
@@ -36,6 +38,7 @@ Find sources relevant to the question.
     });
 
     const results: ResearchResult[] = [];
+    console.log("OPENAI RETURNED");
 
     for (const item of response.output) {
         if (item.type !== "message") {
