@@ -1,0 +1,22 @@
+{
+  "name": "@thesis/agents",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test:decomposer": "tsx src/test-decomposer.ts",
+    "test:search": "tsx src/test-search.ts",
+    "test:source": "tsx src/test-source-reader.ts",
+    "test:evidence": "tsx src/test-evidence.ts"
+  },
+  "dependencies": {
+    "@thesis/domain": "file:../domain",
+    "dotenv": "^17.4.2",
+    "openai": "^5.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
